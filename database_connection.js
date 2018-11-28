@@ -2,7 +2,7 @@
   const environment = process.env.NODE_ENV || 'development'
 
   // Use connection info from knexfile
-  const config = require('../knexfile')
+  const config = require('process.env.DATABASE_URL/knexfile')
 
   // Coordinate the two above
   const configEnv = config[environment]
