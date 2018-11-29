@@ -22,3 +22,8 @@ app.get('/:id', (req, res) => {
     queries.getById(req.params.id).then(students => res.send(students))
 })
 //the stuff on the video at 9:40ish is a problem
+
+app.post('/', (req, res) =>{
+    queries.createStudent(request.body)
+    .then(response.status(201))
+})
