@@ -24,6 +24,6 @@ app.get('/:id', (req, res) => {
 //the stuff on the video at 9:40ish is a problem
 
 app.post('/', (req, res) =>{
-    queries.createStudent(request.body)
-    .then(response.status(201))
+    queries.createStudent(req.body)
+    .then(newStudent => res.status(201).send(newStudent))
 })

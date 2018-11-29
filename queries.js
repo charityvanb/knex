@@ -12,5 +12,6 @@ getById(id) {
 createStudent(newStudent){
     return database('students')
     .insert(newStudent)
+    .returning('*')
     },
 }
